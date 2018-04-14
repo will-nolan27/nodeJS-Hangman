@@ -1,1 +1,1 @@
-# nodeJS-Hangman
+A node Js hangman game. Guess letters to reveal words.
