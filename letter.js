@@ -1,9 +1,19 @@
-var letter = function(char, show, letterRender){
+var Letter = function (char, guessed, display) {
 	this.char = char;
-	this.show = false;
-	this.letterRender = function(){
-		return !(this.show) ? "_" : this.char;
+	this.guessed = guessed;
+	this.display = function () {
+		this.show = "";
+		if (this.guessed === false) {
+			this.show = "_";
+		} else {
+			this.show = this.char;
+		}
 	};
-};
 
-module.exports = letter;
+};
+var A = new Letter("B", false);
+A.display(console.log(A.show));
+
+
+
+module.exports = Letter;
